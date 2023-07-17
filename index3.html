@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <style>
+
+
+        html{
+            font-size: 18px;
+            font-family: "Palatino Linotype", "Book Antiqua";
+        }
+
+        body{
+            padding: 0;
+            margin: 0;
+        }
+
+        a{
+            text-decoration: none;
+            display: block;
+        }
+
+        ul{
+            list-style: none
+        }
+
+        p{
+            padding: 0;
+            margin:0;
+        }
+
+        .list{
+            padding: 0;
+            margin: 0;
+        }
+
+        .main{
+            width: 100%;
+            background-color: #ebebeb;
+        }
+        
+        .container{
+            width: 1024px;
+            margin: 0 auto;
+            padding: 0 12px;
+        }
+
+        .main-container__wrapp-form{
+            padding: 25px 0;
+        }
+
+        .form__wrapp{
+            background-color: #f5f5f5;
+            padding: 30px;
+        }
+
+        .form__register{
+            display: flex;
+            flex-direction: column;
+        }
+        
+
+        .form__register-title{
+            font-weight: bold;
+        }
+
+        .form__block-union{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .register-label{
+            padding-right: 10px;
+        }
+
+        .form__register{
+            width: 48%;
+        }
+
+        .register_input{
+            width: 100%;
+            box-sizing: border-box;
+            height: 48px;
+            padding: 10px;
+            border: 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+
+        }
+
+        .form__register-user-pass-union-input{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .form__register-pass-input,
+        .form__register-repass-input{
+            width: 45%;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+        }
+
+        .form__wrapp-info{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .form__personal-details{
+            width: 48%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .form__personal-details-name,
+        .form__personal-details-surname{
+            width: 48%;
+        }
+
+        .form__personal-details-name-surname-block{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .form__personal-details-date-male-block{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .form__personal-details-male,
+        .form__personal-details-date{
+            width: 48%;
+        }
+
+        .form__personal-details-date{
+            border: 0;
+            box-sizing: border-box;
+            height: 48px;
+            padding: 10px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        }
+
+        .form_block-info{
+            padding-bottom: 20px;
+        }
+
+        .form__check-box{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+        }
+
+        .form__check-box-offers{
+            padding-bottom: 10px;
+        }
+
+        .form__wrapp-button{
+            display: flex;
+            justify-content: end;
+        }
+
+
+        .form__wrapp{
+            position: relative;
+            padding: 0;
+        }
+
+        form{
+            padding: 30px;
+            background-color: #f5f5f5;
+            overflow: hidden;
+        }
+
+
+        .form__wrapp-info::after{
+            content: "";
+            position: absolute;
+            bottom: 60px;
+            left: -30px;
+            width: 114%;
+            height: 1px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            
+        }
+
+        .form__wrapp-info{
+            padding-bottom: 30px;
+        }
+
+        .form__wrapp-button{
+            margin-top: 40px;
+        }
+
+        .button{
+            padding: 10px 60px;
+            border: 0;
+            border-radius: 5px;
+            background-color: cadetblue;
+            color: #fff;
+        }
+
+        .register_input{
+           background-color: #f5f5f5;
+           color: rgba(0, 0, 0, 1);
+        }
+
+        .form__personal-details-date{
+            background-color: #f5f5f5;
+        }
+
+
+        @media (min-width:901px){
+            .container{
+                width: 870px;
+            }
+        }
+
+        @media (min-width:600px) and (max-width:900px){
+            .container{
+                width: 540px;
+            }
+
+            .form__wrapp-info{
+                flex-direction: column;
+            }
+
+            .form_block-info{
+                width: 100%;
+            }
+
+            .form__register-user-pass-union-input{
+                width: 100%;
+            }
+
+            .form__register-pass-input, 
+            .form__register-repass-input{
+                width: 48%;
+            }
+
+            .form__wrapp-info::after{
+                bottom:80px
+            }
+
+            .form__wrapp-button{
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width:599px){
+            .container{
+                width: 520px;
+            }
+
+
+            .form__wrapp-info{
+                flex-direction: column;
+            }
+
+            .form_block-info{
+                width: 100%;
+            }
+
+            .form__register-user-pass-union-input{
+                width: 100%;
+            }
+
+            .form__register-pass-input, 
+            .form__register-repass-input{
+                width: 100%;
+            }
+
+            .form__wrapp-info::after{
+                bottom:80px
+            }
+
+            .form__wrapp-button{
+                margin-top: 20px;
+            }
+
+
+
+
+
+
+            .form__register-user-pass-union-input{
+                flex-direction: column;
+            }
+
+            .form__personal-details-name-surname-block{
+                flex-direction: column;
+            }
+
+            .register_input{
+                width: 100%;
+            }
+
+            .form__personal-details-date-male-block{
+                flex-direction: column;
+            }
+
+            .form__personal-details-date{
+                width: 100%;
+            }
+        }
+
+        @media (max-width:576px){
+            .container{
+                width: 100%;
+            }
+
+            .form__wrapp-info{
+                flex-direction: column;
+            }
+
+            .form_block-info{
+                width: 100%;
+            }
+
+            .form__register-user-pass-union-input{
+                width: 100%;
+            }
+
+            .form__register-pass-input, 
+            .form__register-repass-input{
+                width: 48%;
+            }
+
+            .form__wrapp-info::after{
+                bottom:80px
+            }
+
+            .form__wrapp-button{
+                margin-top: 20px;
+            }
+
+
+            .form__register-user-pass-union-input{
+                flex-direction: column;
+            }
+
+            .form__personal-details-name-surname-block{
+                flex-direction: column;
+            }
+
+            .register_input{
+                width: 100%;
+            }
+
+            .form__personal-details-date-male-block{
+                flex-direction: column;
+            }
+
+            .form__personal-details-date{
+                width: 100%;
+            }
+        }
+
+        form{
+            box-shadow: 2px 0px 17px 8px rgba(0, 0, 0, 0.5);
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <main class="main">
+        <div class="main-container container">
+            <div class="main-container__wrapp-form">
+                <form action="" class="main-container-form form">
+                    <div class="form__wrapp">
+
+                        <div class="form__wrapp-info">
+
+                            <div class="form__register form_block-info">
+                                <h2 class="form__register-title">Registration Form</h2>
+
+                                <div class="form__register-user form__block-union">
+                                    <label class="form__register-user-label register-label" for="user">
+                                        <img class="form__register-user-images register_images" src="images/username.png" alt="username">
+                                    </label>
+                                    <input class="form__register-user-input register_input" id="user" type="text" placeholder="Username">
+                                </div>
+    
+                                <div class="form__register-mail form__block-union">
+                                    <label class="form__register-mail-label register-label" for="mail">
+                                        <img class="form__register-mail-images register_images" src="images/email.png" alt="email">
+                                    </label>
+                                    <input class="form__register-mail-input register_input" id="mail" type="email" placeholder="Email Address">
+                                </div>
+    
+                                <div class="form__register-user-pass form__block-union">
+                                    <label class="form__register-pass-label register-label" for="password">
+                                        <img class="form__register-pass-images register_images" src="images/pswd.png" alt="password">
+                                    </label>
+
+                                    <div class="form__register-user-pass-union-input">
+                                        <input class="form__register-pass-input register_input" id="password" type="password" placeholder="Password">
+                                        <input class="form__register-repass-input register_input" id="password" type="password" placeholder="Confirm password">
+                                    </div>
+                                   
+                                </div>
+                            </div>
+    
+                            <div class="form__personal-details form_block-info">
+                                <h2 class="form__register-title">Personal Details</h2>
+                                
+                                <div class="form__personal-details-name-surname-block form__block-union">
+                                    <input class="form__personal-details-name register_input" type="text" placeholder="First Name">
+                                    <input class="form__personal-details-surname register_input" type="text" placeholder="Last Name">
+                                </div>
+
+                                <div class="form__personal-details-date-male-block form__block-union">
+                                    <select class="form__personal-details-male register_input" name="Male" id="male-select">
+                                        <option value="">Male</option>
+                                        <option value="girl">Girl</option>
+                                        <option value="boy">Boy</option>
+                                    </select>
+
+                                    <input class="form__personal-details-date" type="date" >
+                                </div>
+
+                            </div>
+    
+                            <div class="form__check-box form_block-info">
+
+                                <div class="form__check-box-offers-check form__check-box-offers">
+                                    <input type="checkbox" id="form-check-box-offer" name="form-check-box-offer">
+                                    <label for="form-check-box-offer">I want to Receive mews and special offers</label>
+                                </div>
+
+                                <div class="form__check-box-conditions-check form__check-box-offers">
+                                    <input type="checkbox" id="form-check-box-conditions" name="form-check-box-conditions">
+                                    <label for="form-check-box-conditions">I agree with the Terms and Conditions</label>
+                                </div>
+                             
+
+
+                               
+                            </div>
+
+                            
+                        </div>
+
+                        <div class="form__wrapp-button">
+
+                            <button class="button" type="submit">SUBMIT</button>
+
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

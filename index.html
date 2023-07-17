@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/f0787f49d4.js" crossorigin="anonymous"></script>
+    <style>
+        html{
+            font-size: 20px;
+        }
+
+        body{
+            padding: 0;
+            margin: 0;
+        }
+
+        a{
+            text-decoration: none;
+            display: block;
+        }
+
+        ul{
+            list-style: none
+        }
+
+        p{
+            padding: 0;
+            margin:0;
+        }
+
+        .list{
+            padding: 0;
+            margin: 0;
+        }
+
+        form{
+            background-color: #9fcdcd;
+        }
+
+
+        .header{
+            width: 100%;
+            background-color: #f5f5f5;
+        }
+
+        .container{
+            width: 1024px;
+            margin: 0 auto;
+            padding: 0 12px;
+        }
+
+        .header__form{
+            padding: 90px 40px;
+        }
+
+        .form_cart{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form_cart > label{
+            padding-bottom: 8px;
+            color: #3a5c4a;
+        }
+
+        .form_cart-input{
+            margin-bottom: 12px;
+            padding: 15px 10px;
+            background-color: #a9d2d2;
+            border: 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+        }
+
+        .form_date-inputDay{
+            padding: 10px 0px;
+            width: 30%;
+        }
+
+        .form_date-inputMonth{
+            padding: 15px 10px;
+            width: 30%;
+        }
+
+        .form_cvv-cart-input{
+            width: 30%;
+        }
+
+        .form_wrapp-date-cart{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .form_dateUnion-cart-union{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .form_cvv-cart{
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+        }
+
+        .header__form-wrapp{
+            width: 60%;
+        }
+
+        .form_wrapp-date-cart{
+        }
+
+        .form_cvv-cart{
+            width: 50%;
+        }
+
+        .form_wrapp-date-cart-name{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .form_wrapp-date-cart{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form_date-cart{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .form_date-cart > input{
+            width: 25%;
+        }
+
+        .cvv-name-class{
+            display: block;
+            align-self: flex-start; 
+            width: 25%;
+            padding-right: 20px;
+        }
+
+        .form_wrapp-date-cart-name > label{
+            margin-bottom: 10px;
+        }
+
+      
+
+        .credit_card-bloc_style{
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            width: 100%;
+            height: 40px;
+            background-color: orangered;
+            color: white;
+            top: 36px;
+            left: -30px;
+        }
+
+        .header__form-wrapp{
+            position: relative;
+        }
+
+        .header__form{
+            border-radius: 20px;
+        }
+
+        form{
+            overflow: hidden;
+            position: relative;
+        }
+      
+       form::after{
+            content: "";
+            position: absolute;
+            width: 370px;
+            height: 390px;
+            background-image: url(images/moon_flag.png);
+            background-size: 200px 100px;
+            background-origin: border-box;
+            background-repeat: no-repeat;
+            background-size: contain;
+            top: 150px;
+            right: -112px;
+       }
+
+       .header__form{
+            width: 100%;
+       }
+
+       .wrapp-form-style{
+        width: 75%;
+            position: relative;
+            margin: 0 auto;
+       }
+
+    </style>
+</head>
+<body>
+    
+    <header class="header">
+        <div class="header-container container">
+            <div class="wrapp-form-style">
+                <div class="credit_card-bloc_style">CREDIT CARD DETAILS</div>
+
+                <form class="header__form">
+                    <div class="header__form-wrapp">
+    
+                        <div class="form_number-cart form_cart">
+                            <label for="NumberCart">Card Number</label>
+                            <input class="form_cart-input" id="NumberCart" type="text" placeholder="1234 5678 9012 3456">
+                        </div>
+        
+                        <div class="form_name-cart form_cart">
+                            <label for="cartName">Name On Card</label>
+                            <input class="form_cart-input" id="cartName" type="text" placeholder="1234 5678 9012 3456">
+                        </div>
+    
+        
+                        <div class="form_wrapp-date-cart form_cart">
+    
+                            <div class="form_wrapp-date-cart-name">
+                                <label for="date">Expiry Date</label>
+                                <label class="cvv-name-class" for="cvv-name">CVV / CVN</label>
+    
+                            </div>
+    
+                            <div class="form_date-cart-data">
+                                <div class="form_date-cart">
+                                        <input class="form_date-inputDay form_cart-input" id="date" type="text" placeholder="02">
+                                        <input class="form_date-inputMonth form_cart-input" type="text" placeholder="2017">
+                                        <input id="cvv-name" class="form_cvv-cart-input form_cart-input" type="password" placeholder="***">
+                                </div>
+            
+                               
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+
+
+</body>
+</html>
